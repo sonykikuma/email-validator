@@ -22,12 +22,7 @@ A powerful, responsive email validation system built with React, Vite, Bootstrap
 
 🖥️ Tech Stack
 
-React, Vite, Bootstrap
-Routing: React Router
-State Management: React Hooks
-Styling: Bootstrap 5
-Icons: React Icons
-Storage: LocalStorage
+React, Vite React Router, React Hooks, Bootstrap 5 React Icons
 
 
 💻 Installation & Setup

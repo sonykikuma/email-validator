@@ -171,7 +171,6 @@ const Hero = () => {
               Supports .txt and .csv files. Maximum file size: 5MB.
             </p>
 
-            {/* Show Uploaded File Name */}
             {uploadedFile && (
               <p className="text-muted">
                 Uploaded file: <strong>{uploadedFile}</strong>
@@ -179,7 +178,6 @@ const Hero = () => {
             )}
           </div>
 
-          {/* Progress Bar (Shown While Loading) */}
           {loading && (
             <div
               className="progress mt-3"
@@ -193,31 +191,27 @@ const Hero = () => {
             </div>
           )}
 
-          {
-            loading ? (
-              <p>Loading...</p>
-            ) : (
-              <div className="d-flex justify-content-center mt-4">
-                <Link to="/dashboard" className="text-decoration-none">
-                  <div
-                    className="card shadow-lg p-3 text-center d-flex align-items-center justify-content-center flex-column border-primary bg-light"
-                    style={{
-                      cursor: "pointer",
-                      width: "250px",
-                      height: "130px",
-                      transition: "0.3s",
-                    }}
-                  >
-                    <BsGraphUp size={30} className="text-primary mb-2" />
-                    <h6 className="mb-1 text-primary">View Dashboard</h6>
-                    <small className="text-muted">See Validation Results</small>
-                  </div>
-                </Link>
-              </div>
-            )
-
-            // <Link to="/dashboard">Dashboard</Link>
-          }
+          {loading ? (
+            <p>Loading...</p>
+          ) : (
+            <div className="d-flex justify-content-center mt-4">
+              <Link to="/dashboard" className="text-decoration-none">
+                <div
+                  className="card shadow-lg p-3 text-center d-flex align-items-center justify-content-center flex-column border-primary bg-light"
+                  style={{
+                    cursor: "pointer",
+                    width: "250px",
+                    height: "130px",
+                    transition: "0.3s",
+                  }}
+                >
+                  <BsGraphUp size={30} className="text-primary mb-2" />
+                  <h6 className="mb-1 text-primary">View Dashboard</h6>
+                  <small className="text-muted">See Validation Results</small>
+                </div>
+              </Link>
+            </div>
+          )}
         </div>
       </div>
     </div>
@@ -225,9 +219,3 @@ const Hero = () => {
 };
 
 export default Hero;
-// <ValidationResults
-//   validationResults={validationResults}
-//   currentPage={currentPage}
-//   emailsPerPage={emailsPerPage}
-//   paginate={paginate}
-// />

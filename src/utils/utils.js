@@ -13,7 +13,7 @@ export const validateEmailFormat = (email) => {
   const localPart = parts[0];
   const domainPart = parts[1];
 
-  // Split domain into name and extension (TLD)
+  // Split domain into name and extension
   const domainParts = domainPart.split(".");
   if (domainParts.length < 2) return false; // Must have at least one "."
 
@@ -25,7 +25,7 @@ export const validateEmailFormat = (email) => {
     if (part.length === 0) return false;
   }
 
-  // Check for valid TLD (at least 2 characters)
+  // Check for valid TLD(top-level domain) (at least 2 characters)
   const tld = domainParts[domainParts.length - 1];
   if (tld.length < 2) return false;
 

@@ -2,6 +2,7 @@
 
 A powerful, responsive email validation system built with React, Vite, Bootstrap, and React Router. Verify emails with real-time validation, sorting, and bulk upload support.
 
+
 🚀 Features
 
 ✅ Email Validation - Detect valid, invalid, and disposable emails.
@@ -22,15 +23,10 @@ A powerful, responsive email validation system built with React, Vite, Bootstrap
 🖥️ Tech Stack
 
 Frontend: React, Vite, Bootstrap
-
 Routing: React Router
-
 State Management: React Hooks
-
 Styling: Bootstrap 5
-
 Icons: React Icons
-
 Storage: LocalStorage
 
 

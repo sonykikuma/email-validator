@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Pagination from "./Pagination";
 import { GrSort } from "react-icons/gr";
 import Download from "./Download";
+import { Link } from "react-router-dom";
 
 const ValidationResults = ({
   validationResults,
@@ -70,8 +71,11 @@ const ValidationResults = ({
       </div>
       {displayedResults.length === 0 ? (
         <p className="text-center text-danger">
-          Please verify emails to see the validation results and download
-          report.
+          Please{" "}
+          <Link to="/" style={{ textDecoration: "none" }}>
+            verify
+          </Link>{" "}
+          emails to see the validation results and download report.
         </p>
       ) : (
         <>

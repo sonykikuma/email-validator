@@ -20,18 +20,6 @@ Styling: Bootstrap 5
 Icons: React Icons
 Storage: LocalStorage
 
-📂 Folder Structure
-
-📂 project-root/
-│── 📂 src/
-│ ├── 📂 components/ # Reusable UI components
-│ ├── 📂 pages/ # Main pages (Dashboard, Home)
-│ ├── 📂 assets/ # Static assets (icons, images)
-│ ├── 📜 App.js # Main React app component
-│ ├── 📜 main.jsx # Entry point for Vite
-│── 📜 package.json # Dependencies & scripts
-│── 📜 README.md # Project documentation
-│── 📜 .gitignore # Ignored files for Git
 
 💻 Installation & Setup
 

@@ -1,4 +1,5 @@
 📧 VerifyMailX - Email Validation System
+
 A powerful, responsive email validation system built with React, Vite, Bootstrap, and React Router. Verify emails with real-time validation, sorting, and bulk upload support.
 
 🚀 Features
@@ -26,8 +27,10 @@ Storage: LocalStorage
 1️⃣ Clone the Repository
 git clone https://github.com/sonykikuma/email-validator.git
 cd VerifyMailX
+
 2️⃣ Install Dependencies
 npm install
+
 3️⃣ Run the App
 npm run dev
 The app will start at http://localhost:5173/

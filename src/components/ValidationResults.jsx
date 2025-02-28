@@ -69,7 +69,10 @@ const ValidationResults = ({
         </div>
       </div>
       {displayedResults.length === 0 ? (
-        <p>No emails validated yet.</p>
+        <p className="text-center text-danger">
+          Please verify emails to see the validation results and download
+          report.
+        </p>
       ) : (
         <>
           <div

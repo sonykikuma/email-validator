@@ -32,13 +32,7 @@ export const validateEmailFormat = (email) => {
   return true;
 };
 
-//using regex
-// const validateEmailFormat = (email) => {
-//   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-//   return emailRegex.test(email);
-// };
-
-// Function to check if an email is from a disposable provider
+// this is a function to check if an email is from a disposable provider
 export const isDisposableEmail = (email) => {
   const domain = email.split("@")[1];
   return disposableDomains.includes(domain);

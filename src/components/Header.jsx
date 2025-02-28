@@ -5,9 +5,12 @@ import { FaSearch, FaCode, FaLinkedin } from "react-icons/fa";
 
 const Header = () => {
   return (
-    <header className="shadow">
+    <header
+      className="shadow bg-white fixed-top"
+      style={{ width: "100%", zIndex: "1030" }}
+    >
       <div className="container">
-        <nav className="navbar navbar-expand-lg navbar-light bg-white px-4">
+        <nav className="navbar navbar-expand-lg navbar-light px-4 py-3">
           <NavLink
             className="navbar-brand d-flex align-items-center fw-bold"
             to="/"

@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 import { validateEmailFormat, isDisposableEmail } from "../utils/utils";
 import ValidationResults from "./ValidationResults";
-import { BsUpload } from "react-icons/bs";
+import { BsUpload, BsGraphUp } from "react-icons/bs";
 
 const Hero = () => {
   const [emailList, setEmailList] = useState("");
@@ -27,7 +27,7 @@ const Hero = () => {
 
   const validateEmails = async () => {
     setLoading(true);
-    setProgress(0); // Reset progress bar
+    setProgress(0);
 
     const emails = emailList
       .split(/[\n,]+/)
@@ -50,7 +50,7 @@ const Hero = () => {
 
       results.push({ email: emails[i], status });
 
-      // Update progress dynamically
+      // this will update progress dynamically
       setProgress(((i + 1) / emails.length) * 100);
 
       // Simulate a slight delay for real-time progress update
@@ -70,7 +70,7 @@ const Hero = () => {
     setEmailList("");
 
     setLoading(false);
-    setProgress(0); // Hide progress bar after completion
+    setProgress(0);
   };
 
   const handleEmailListChange = (e) => {
@@ -107,7 +107,6 @@ const Hero = () => {
     handleFileUpload({ target: { files: [file] } });
   };
 
-  // Prevent default browser behavior for drag events
   const handleDragOver = (event) => {
     event.preventDefault();
   };
@@ -115,7 +114,7 @@ const Hero = () => {
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
-    <div className="bg-light mt-0">
+    <div className="bg-light mt-5">
       <div className="container ">
         <div className="py-5 ">
           <h1 className="text-center">
@@ -141,7 +140,6 @@ const Hero = () => {
             </button>
           </div>
           <div className="d-flex flex-column align-items-center mt-3">
-            {/* Upload Box */}
             <div
               className="bg-white shadow-sm p-3 rounded text-center d-flex flex-column align-items-center"
               onDrop={handleDrop}
@@ -195,18 +193,31 @@ const Hero = () => {
             </div>
           )}
 
-          {loading ? (
-            <p>Loading...</p>
-          ) : (
-            // <Link to="/dashboard">Dashboard</Link>
+          {
+            loading ? (
+              <p>Loading...</p>
+            ) : (
+              <div className="d-flex justify-content-center mt-4">
+                <Link to="/dashboard" className="text-decoration-none">
+                  <div
+                    className="card shadow-lg p-3 text-center d-flex align-items-center justify-content-center flex-column border-primary bg-light"
+                    style={{
+                      cursor: "pointer",
+                      width: "250px",
+                      height: "130px",
+                      transition: "0.3s",
+                    }}
+                  >
+                    <BsGraphUp size={30} className="text-primary mb-2" />
+                    <h6 className="mb-1 text-primary">View Dashboard</h6>
+                    <small className="text-muted">See Validation Results</small>
+                  </div>
+                </Link>
+              </div>
+            )
 
-            <ValidationResults
-              validationResults={validationResults}
-              currentPage={currentPage}
-              emailsPerPage={emailsPerPage}
-              paginate={paginate}
-            />
-          )}
+            // <Link to="/dashboard">Dashboard</Link>
+          }
         </div>
       </div>
     </div>
@@ -214,3 +225,9 @@ const Hero = () => {
 };
 
 export default Hero;
+// <ValidationResults
+//   validationResults={validationResults}
+//   currentPage={currentPage}
+//   emailsPerPage={emailsPerPage}
+//   paginate={paginate}
+// />

@@ -5,20 +5,32 @@ A powerful, responsive email validation system built with React, Vite, Bootstrap
 🚀 Features
 
 ✅ Email Validation - Detect valid, invalid, and disposable emails.
+
 ✅ Bulk Upload - Supports .CSV and .TXT file uploads.
+
 ✅ Sorting & Filtering - Organize results by status.
+
 ✅ Download Reports - Export validation results.
+
 ✅ Pagination - Easily navigate through large lists.
+
 ✅ Progress Bar - Live progress updates while validating.
+
 ✅ Responsive UI - Optimized for all devices using Bootstrap.
+
 
 🖥️ Tech Stack
 
 Frontend: React, Vite, Bootstrap
+
 Routing: React Router
+
 State Management: React Hooks
+
 Styling: Bootstrap 5
+
 Icons: React Icons
+
 Storage: LocalStorage
 
 
